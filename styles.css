@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #795548;
+    --secondary-color: #3b2d09;
+    --accent-color: #FFC107;
+    --text-color: #ffffff;
+    --background-color: #FFECB3;
+    --font-family: 'Roboto', sans-serif;
+    --hover-text-color: #000000; /* Color oscuro para el texto en hover */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 1em;
+    padding: 1em 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('./assets/img/header.jpeg');
+    background-size: cover; /* Ajuste para que la imagen cubra todo el header */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #333;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    font-size: larger;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: var(--hover-text-color); /* Cambia el color del texto a oscuro cuando se pasa el mouse */
+}
+
+.imagen-redondeada {
+    border-radius: 15px;
+}
+
+.cafes-container, .cursos-container {
+    padding: 2em;
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn-primary.add-to-cart {
+    background-color: var(--primary-color); /* Usar variable de color */
+    border-color: var(--secondary-color); /* Usar variable de color */
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+section {
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2em;
+    padding-bottom: 0;
+    background-color: var(--background-color);
+}
+
+.cursos-container {
+    padding-bottom: 1em;
+    background-color: var(--accent-color);
+    border: 0;
+}
+
+main section div a {
+    font-size: larger;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+main section div a:hover {
+    font-weight: bold;
+    color: var(--hover-text-color); /* Cambia el color del texto a oscuro cuando se pasa el mouse */
+}
+
+.total {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 0; /* Ajuste de padding */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer div.contacto a {
+    font-size: larger;
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1em;
+    margin: 20px;
+    padding: 50px;
+}
+
+form label, form input, form textarea, form button {
+    margin-bottom: 1em;
+}
+
+#contacto form {
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .productos-container, .cursos-container {
+        flex-direction: column;
+    }
+}
